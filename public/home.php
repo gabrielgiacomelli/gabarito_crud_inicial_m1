@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("components/sessao.php");
 include("../infra/db/connect.php");
 
@@ -26,6 +27,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Home</title>
 </head>
 <body>
+    <?php 
+    include("components/header.php"); 
+    ?>
     <h3>Bem-Vindo! <?php echo $_SESSION["usuario"]; ?></h3>
     <a href="logout.php"> Sair</a>
 

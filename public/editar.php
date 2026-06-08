@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("components/sessao.php");
 
 include("../infra/db/connect.php");
