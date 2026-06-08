@@ -12,15 +12,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
 
-            <a class="navbar-brand" href="#">
-                Sistema de Login
-            </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="menu">
+            <div class="collapse navbar-collapse justify-content-between" id="menu">
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
