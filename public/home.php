@@ -1,10 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION["usuario"])){
-    header("Location: ../index.php");
-    exit();
-}
-
+include("components/sessao.php");
 include("../infra/db/connect.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
