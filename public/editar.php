@@ -45,6 +45,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <br>
         <button type="submit">Salvar</button>
     </form>
-    
+    <?php include("components/footer.php") ?>
 </body>
 </html>

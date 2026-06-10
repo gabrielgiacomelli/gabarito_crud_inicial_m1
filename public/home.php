@@ -59,6 +59,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     ?>
 
+<?php include("components/footer.php") ?>
 
 
 </body>

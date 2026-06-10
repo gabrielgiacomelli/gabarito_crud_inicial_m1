@@ -11,29 +11,12 @@
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-between" id="menu">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Início</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-
-                </ul>
+            <div class="justify-content-between d-flex w-100">
+               <a class="navbar-brand" href="#">INICIO</a>
+               <a class="navbar-brand" href="#">CADASTRAR</a>
+               <a class="navbar-brand" href="#">EDITAR</a>
+               <a class="navbar-brand" href="#">EXCLUIR</a>
             </div>
-
         </div>
     </nav>
 </header>
