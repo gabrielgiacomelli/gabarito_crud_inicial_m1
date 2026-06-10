@@ -33,18 +33,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Editar</title>
 </head>
 <body>
+<?php include("components/header.php"); ?>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="card shadow p-4 w-25">   
+            <h4>Editar Usuário: </h4>
+            <form method="POST">
 
-<h2>Editar Usuário</h2>
-<form method="POST">
-        <label>Usuário:</label>
-        <input type="text" name="usuario" value =" <?php echo $usuario['usuario'] ?>">
-        <br>
-        <label>Senha:</label>
-        <input type="password" name="senha" value =" <?php echo $usuario['senha'] ?>">
-        <br>
-        <br>
-        <button type="submit">Salvar</button>
-    </form>
+                <div class="mb-3">
+                    <label class="form-label">Novo Usuário:</label>
+                    <input type="text" name="usuario" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Nova Senha:</label>
+                    <input type="password" name="senha" class="form-control">
+                </div>
+
+                <?php
+                
+                    if(isset($erro)){
+                        echo "<div class='alert alert-danger'>$erro</div>";
+                    };
+
+                ?>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    EDITAR
+                </button>
+            </form>
     <?php include("components/footer.php") ?>
 </body>
 </html>
