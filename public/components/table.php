@@ -22,15 +22,11 @@
                     <td>". $linha['usuario'] . "</td>
                     <td>". $linha['senha'] . "</td>
                     <td><a href='editar.php?id=" . $linha['id'] . "' class='btn btn-sm btn-primary'>Editar</a></td>
-                    <td><a href='excluir.php?id=" . $linha['id'] . "' class='btn btn-sm btn-danger'>Excluir</a></td>
+                    <td><a href='validacao.php?id=" . $linha['id'] . "' class='btn btn-sm btn-danger'>Excluir</a></td>
+
                 </tr>
         ";
 
     }
-    
     ?>
-
-    
-
-
 </table>
