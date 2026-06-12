@@ -41,12 +41,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 <div class="mb-3">
                     <label class="form-label">Novo Usuário:</label>
-                    <input type="text" name="usuario" class="form-control">
+                    <input type="text" name="usuario" placeholder" value="<?php echo $usuario['usuario']; ?>" class="form-control">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Nova Senha:</label>
-                    <input type="password" name="senha" class="form-control">
+                    <input type="password" name="senha" placeholder" value="<?php echo $usuario['senha']; ?>" class="form-control">
                 </div>
 
                 <?php
