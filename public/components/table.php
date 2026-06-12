@@ -1,32 +1,72 @@
-<h4>Usuários Cadastrados</h4>
+<div class="container mt-4">
 
-<table border="1" cellpadding="3">
+    <div class="card shadow">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Usuários Cadastrados</h4>
+        </div>
 
-    <tr>
-        <th>ID</th>
-        <th>Usuário</th>
-        <th>Senha</th>
-        <th>Editar</th>
-        <th>Excluir</th>
-    </tr>
+        <div class="card-body">
 
-    <?php
-    
-    $sqlTodosUsuarios = "SELECT * FROM usuarios";
+            <div class="table-responsive">
 
-    $resultadoTodosUsuarios = $conn->query($sqlTodosUsuarios);
+                <table class="table table-striped table-hover align-middle">
 
-    while($linha = $resultadoTodosUsuarios->fetch_assoc()){
-        echo "  <tr>
-                    <td>". $linha['id'] . "</td>
-                    <td>". $linha['usuario'] . "</td>
-                    <td>". $linha['senha'] . "</td>
-                    <td><a href='editar.php?id=" . $linha['id'] . "' class='btn btn-sm btn-primary'>Editar</a></td>
-                    <td><a href='validacao.php?id=" . $linha['id'] . "' class='btn btn-sm btn-danger'>Excluir</a></td>
+                    <thead class="table-primary">
+                        <tr>
+                            <th style="width: 10%;">ID</th>
+                            <th style="width: 40%;">Usuário</th>
+                            <th style="width: 20%;" class="text-center">Senha</th>
+                            <th style="width: 15%;" class="text-center">Editar</th>
+                            <th style="width: 15%;" class="text-center">Excluir</th>
+                        </tr>
+                    </thead>
 
-                </tr>
-        ";
+                    <tbody>
 
-    }
-    ?>
-</table>
+                        <?php
+
+                        $sqlTodosUsuarios = "SELECT * FROM usuarios";
+                        $resultadoTodosUsuarios = $conn->query($sqlTodosUsuarios);
+
+                        while ($linha = $resultadoTodosUsuarios->fetch_assoc()) {
+
+                            $senhaOculta = str_repeat('•', strlen($linha['senha']));
+
+                            echo "
+                            <tr>
+                                <td>{$linha['id']}</td>
+
+                                <td>{$linha['usuario']}</td>
+
+                                <td class='text-center'>
+                                    {$senhaOculta}
+                                </td>
+
+                                <td class='text-center'>
+                                    <a href='editar.php?id={$linha['id']}'
+                                       class='btn btn-primary btn-sm'>
+                                        Editar
+                                    </a>
+                                </td>
+
+                                <td class='text-center'>
+                                    <a href='validacao.php?id={$linha['id']}'
+                                       class='btn btn-danger btn-sm'>
+                                        Excluir
+                                    </a>
+                                </td>
+                            </tr>";
+                        }
+
+                        ?>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
