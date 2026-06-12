@@ -14,7 +14,7 @@
             <div class="justify-content-between d-flex w-100">
                <a class="navbar-brand" href="home.php">INICIO</a>
                <a class="navbar-brand" href="cadastrar.php">CADASTRAR</a>
-               <a class="navbar-brand" href="logout.php">SAIR</a>
+               <a class="navbar-brand" href="validacaosair.php">SAIR</a>
             </div>
         </div>
     </nav>
